@@ -1,0 +1,27 @@
+type: object
+required:
+  - file
+  - kitchenId
+properties:
+  id:
+    readOnly: true
+    type: string
+    description: |
+      WFD assigns a photo ID to each upload.
+      Use the `photoId` as a filter to track ingredients added to the kitchen using the `ingredients-audit` API.
+    format: uuid
+  file:
+    description: |
+      The file in a `base64` encoded format. Maximum size: 20 MB.
+    writeOnly: true
+    type: string
+    example: R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=
+  kitchenId:
+    description: The ingredients are added to the kitchen.
+    type: string
+    example: 'altman-family'
+  createdAt:
+    description: The date-time (in ISO-8601 format) that the photo was uploaded.
+    type: string
+    format: date-time
+    readOnly: true

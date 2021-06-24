@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Reducing ingredients
+  summary: Reduce ingredients
+  operationId: reduceIngredients
+  security:
+    - auth: ['write:kitchen']
+  description: |
+    Whether the ingredients were cooked, eaten, tossed, or given away, mark them as reduced which in turn reduces the available ingredients.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Reduction.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/Reduction.yaml
+    required: true
+  responses:
+    '201':
+      description: Reduction was recorded.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Reduction.yaml
+    # '401':
+    #   $ref: ../components/responses/Unauthorized.yaml
+    # '403':
+    #   $ref: ../components/responses/Forbidden.yaml
+    # '422':
+    #   $ref: ../components/responses/ValidationError.yaml

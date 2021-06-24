@@ -1,4 +1,6 @@
-# OpenAPI Definition Starter
+# What's for dinner?
+
+APIs for tracking food ingredient inventory.
 
 ## How to use this starter
 

@@ -1,0 +1,36 @@
+post:
+  tags:
+    - Adding ingredients
+  summary: Upload a photo
+  operationId: postPhotos
+  security:
+    - auth: ['write:kitchen']
+  description: |
+    Upload a photo of a receipt or of a kitchen refrigerator, pantry, or cabinet contents.
+
+    The API will parse the photo and add the ingredients to the corresponding kitchen.
+
+    Use the photo id in the response as a filter in the ingredients-audit API.
+
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Photo.yaml
+      multipart/form-data:
+        schema:
+          $ref: ../components/schemas/Photo.yaml
+    required: true
+  responses:
+    '201':
+      description: Photo was uploaded.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Photo.yaml
+    # '401':
+    #   $ref: ../components/responses/Unauthorized.yaml
+    # '403':
+    #   $ref: ../components/responses/Forbidden.yaml
+    # '422':
+    #   $ref: ../components/responses/ValidationError.yaml

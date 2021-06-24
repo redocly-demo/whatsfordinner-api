@@ -1,0 +1,3 @@
+allOf:
+  - $ref: ./Reduction.yaml
+  - $ref: ./Photo.yaml

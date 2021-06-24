@@ -1,37 +1,34 @@
-This is an **example** API to demonstrate features of the OpenAPI specification.
+# About the API
 
-# Introduction
+Before you get too excited, this is a fake API created for a talk.
 
-This API definition is intended to to be a good starting point for
-describing your API in 
+What's for dinner's APIs track kitchen ingredients on-hand.
 
-[OpenAPI/Swagger
-format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
+Use the output as input to your app&mdash;some ideas include:
 
-It also demonstrates features of the
-[create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-and 
+- filtering recipes to show those that would work with ingredients on-hand
+- health coaching
+- share info with medical practitioners
+- and more
 
-the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-the standard OpenAPI syntax, we use a few 
+Steps:
 
-[vendor
-extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+1. Get the kitchen's ingredients on-hand.
 
+Use the input APIs for a fully integrated private-label kitchen ingredients tracker.
 
-# OpenAPI Specification
+1. Take a picture of the fridge or pantry.
+2. Upload it.
 
-The goal of The OpenAPI Specification is to define a standard,
-language-agnostic interface to REST APIs which
+Or...
 
-allows both humans and computers to discover and understand the capabilities
-of the service without access to source
+1. Go shopping at the grocery store.
+2. Take a picture of your receipt.
+3. Upload it.
 
-code, documentation, or through network traffic inspection. When properly
-defined via OpenAPI, a consumer can 
+Or...
 
-understand and interact with the remote service with a minimal amount of
-implementation logic. Similar to what
+1. Enter an ingredient manually.
+2. Repeat for each ingredient.
 
-interfaces have done for lower-level programming, OpenAPI removes the
-guesswork in calling the service.
+Create an account and API credentials to get started.
