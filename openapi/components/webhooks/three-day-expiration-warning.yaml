@@ -1,0 +1,16 @@
+summary: Ingredients will expire soon
+description: |
+  Receive a webhook three days prior to ingredients expiration.
+operationId: three-day-expiration-warning
+tags:
+  - Notifications
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: ../schemas/Ingredient.yaml
+  description: Ingredient resource.
+  required: true
+responses:
+  '2xx':
+    description: Return any 2xx status to indicate that the data was received successfully.

@@ -24,7 +24,13 @@ tags:
       What's for dinner parses uploaded photos and adds the ingredients to the kitchen.
   - name: Reducing ingredients
     description: |
-      Cook, eat, donate, or discard ingredients.   
+      Cook, eat, donate, or discard ingredients.
+  - name: Notifications
+    description: |
+      Get automated notifications when certain events occur.
+      Respond with an HTTP status 2XX without any content to indicate receipt.
+
+      WFD will retry webhook delivery with an exponential backoff for 24 hours.
 servers:
   - url: 'https://api.whatsfordinner.dev'
 paths:
@@ -38,6 +44,11 @@ paths:
     $ref: 'paths/available-ingredients@{kitchenId}.yaml'
   # '/ingredients-audit':
   #   $ref: 'paths/ingredients-audit.yaml'
+x-webhooks:
+  three-day-expiration-warning:
+    post:
+      $ref: ./components/webhooks/three-day-expiration-warning.yaml
+
 components:
   securitySchemes:
     auth:
