@@ -1,0 +1,28 @@
+type: object
+required:
+  - kitchenId
+  - type
+discriminator:
+  propertyName: type
+  mapping:
+    photo: ./ReductionPhoto.yaml
+    ingredient: ./ReductionIngredient.yaml
+properties:
+  kitchenId:
+    type: string
+    description: The kitchen ID.
+    example: altman-family
+  reason:
+    type: string
+    description: The reason for the reduction.
+    enum:
+      - cooked
+      - donated
+      - eaten
+      - tossed
+  type:
+    type: string
+    description: The type of reduction (from photo or ingredient).
+    enum:
+      - photo
+      - ingredient

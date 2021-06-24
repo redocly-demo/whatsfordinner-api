@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Adding ingredients
+  summary: Add an ingredient
+  operationId: postIngredients
+  security:
+    - auth: ['write:kitchen']
+  description: |
+    Add an ingredient to a kitchen.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Ingredient.yaml
+    required: true
+  responses:
+    '201':
+      description: Ingredient was added.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Ingredient.yaml
+    # '401':
+    #   $ref: ../components/responses/Unauthorized.yaml
+    # '403':
+    #   $ref: ../components/responses/Forbidden.yaml
+    # '422':
+    #   $ref: ../components/responses/ValidationError.yaml

@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Listing ingredients
+  summary: List available ingredients
+  operationId: getAvailableIngredients
+  security:
+    - auth: ['read:kitchen']
+  description: |
+    List ingredients that are available in a kitchen.
+  parameters:
+    - name: kitchenId
+      schema:
+        type: string
+      in: path
+      required: true
+  responses:
+    '200':
+      description: Lists available ingredients.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Ingredient.yaml
+    # '401':
+    #   $ref: ../components/responses/Unauthorized.yaml
+    # '403':
+    #   $ref: ../components/responses/Forbidden.yaml
+    # '422':
+    #   $ref: ../components/responses/ValidationError.yaml

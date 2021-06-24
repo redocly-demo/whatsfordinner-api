@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
   version: 1.0.0
-  title: Example.com
-  termsOfService: 'https://example.com/terms/'
+  title: What's for dinner?
+  termsOfService: 'https://docs.whatsfordinner.dev/terms/'
   contact:
     email: contact@example.com
     url: 'http://example.com/contact'
@@ -10,45 +10,41 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: './wfd-logo.png'
   description:
     $ref: ./info-description.md
-externalDocs:
-  description: Find out how to create a GitHub repo for your OpenAPI definition.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+  - name: Listing ingredients
+    description: |
+      List ingredients on-hand, and an audit trail of ingredients.
+  - name: Adding ingredients
+    description: |
+      Add ingredients one-by-one or by uploading photos of refrigerator, cabinet, pantry contents, or grocery receipts.
+
+      What's for dinner parses uploaded photos and adds the ingredients to the kitchen.
+  - name: Reducing ingredients
+    description: |
+      Cook, eat, donate, or discard ingredients.   
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: 'https://api.whatsfordinner.dev'
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/path-item.yaml
-  /pathItemWithExamples:
-    $ref: paths/path-item-with-examples.yaml
+  '/photos':
+    $ref: 'paths/photos.yaml'
+  '/ingredients':
+    $ref: 'paths/ingredients.yaml'
+  '/ingredients-reduction':
+    $ref: 'paths/ingredients-reduction.yaml'
+  '/available-ingredients/{kitchenId}':
+    $ref: 'paths/available-ingredients@{kitchenId}.yaml'
+  # '/ingredients-audit':
+  #   $ref: 'paths/ingredients-audit.yaml'
 components:
   securitySchemes:
-    main_auth:
+    auth:
       type: oauth2
       flows:
         implicit:
           authorizationUrl: 'http://example.com/api/oauth/dialog'
           scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
-    api_key:
-      type: apiKey
-      in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
+            'read:kitchen': read kitchen ingredients
+            'write:kitchen': modify kitchen ingredients

@@ -1,0 +1,47 @@
+type: object
+title: Ingredient
+required:
+  - name
+  - kitchenId
+  - quantity
+  - unit
+  - useBefore
+properties:
+  id:
+    readOnly: true
+    type: string
+    description: |
+      WFD assigns an ingredient ID to each ingredient.
+    format: uuid
+  photoId:
+    readOnly: true
+    type: string
+    nullable: true
+    description: |
+      This is the corresponding id of an ingredient added from a photo.
+    format: uuid
+  kitchenId:
+    description: The ingredients are added to the kitchen.
+    type: string
+    example: 'altman-family'
+  name:
+    description: The name of the ingredient.
+    type: string
+    example: 'broccoli'
+  quantity:
+    description: The numeric value that corresponds with the units.
+    type: number
+    example: 1.5
+  unit:
+    description: The unit of measurement related to the quantity.
+    type: string
+    example: cups
+  useBefore:
+    description: The date-time that the ingredient is best used before.
+    type: string
+    format: date-time
+  createdAt:
+    description: The date-time (in ISO-8601 format) that the photo was uploaded.
+    type: string
+    format: date-time
+    readOnly: true
