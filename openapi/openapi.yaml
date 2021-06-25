@@ -5,7 +5,7 @@ info:
   termsOfService: 'https://docs.whatsfordinner.dev/terms/'
   contact:
     email: contact@example.com
-    url: 'http://example.com/contact'
+    url: 'https://docs.whatsfordinner.dev'
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
