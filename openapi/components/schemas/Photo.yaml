@@ -12,7 +12,7 @@ properties:
     format: uuid
   file:
     description: |
-      The file in a `base64` encoded format. Maximum size: 20 MB.
+      The file in a `base64` encoded format. Maximum size: 40 MB.
     writeOnly: true
     type: string
     example: R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=
