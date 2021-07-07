@@ -1,5 +1,5 @@
 type: object
-require:
+required:
   - file
   - kitchenId
 properties:
