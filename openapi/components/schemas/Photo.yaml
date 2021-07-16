@@ -2,6 +2,7 @@ type: object
 required:
   - file
   - kitchenId
+  - id
 properties:
   id:
     readOnly: true
@@ -24,4 +25,4 @@ properties:
     description: The date-time (in ISO-8601 format) that the photo was uploaded.
     type: string
     format: date-time
-    readOnly: true
+    readOnl: true
