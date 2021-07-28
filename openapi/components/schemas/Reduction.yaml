@@ -10,7 +10,7 @@ discriminator:
 properties:
   kitchenId:
     type: string
-    description: The kitchen ID.
+    description: The kitchen's ID.
     example: altman-family
   reason:
     type: string
