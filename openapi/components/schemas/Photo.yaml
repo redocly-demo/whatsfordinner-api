@@ -7,7 +7,7 @@ properties:
     readOnly: true
     type: string
     description: |
-      WFD assigns a photo ID to each upload.
+      WFD assigns a photo ID to each upload. Here.
       Use the `photoId` as a filter to track ingredients added to the kitchen using the `ingredients-audit` API.
     format: uuid
   file:
