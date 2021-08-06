@@ -11,7 +11,7 @@ properties:
     readOnly: true
     type: string
     description: |
-      WFD assigns an ingredient ID to each ingredient.
+      What's for Dinner assigns an ingredient ID to each ingredient.
     format: uuid
   photoId:
     readOnly: true
