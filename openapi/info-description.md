@@ -1,4 +1,4 @@
-# About the API
+# About the Dinner API
 
 Before you get too excited, this is a fake API created for a talk.
 

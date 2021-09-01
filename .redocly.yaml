@@ -4,7 +4,6 @@ apiDefinitions:
 lint:
   extends:
     - recommended
-  rules:
 referenceDocs:
   htmlTemplate: ./docs/index.html
   # theme:
@@ -14,6 +13,8 @@ referenceDocs:
   generateCodeSamples:
     languages:  # Array of language config objects; indicates in which languages to generate code samples.
       - lang: curl # Can be one of the following supported languages: "curl", "Node.js", "JavaScript".
+      - lang: PHP
+      - lang: Go
       - lang: "Node.js"
       - lang: "JavaScript"
       - lang: Python
