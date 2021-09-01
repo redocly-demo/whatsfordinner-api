@@ -20,6 +20,7 @@ properties:
       - donated
       - eaten
       - tossed
+      - disappeared
   type:
     type: string
     description: The type of reduction (from photo or ingredient).

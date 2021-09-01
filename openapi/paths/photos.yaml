@@ -6,7 +6,7 @@ post:
   security:
     - auth: ['write:kitchen']
   description: |
-    Upload a photo of a receipt or of a kitchen refrigerator, pantry, or cabinet contents.
+    Upload a **photo** of a receipt or of a kitchen refrigerator, pantry, or cabinet contents.
 
     The API will parse the photo and add the ingredients to the corresponding kitchen.
 
