@@ -8,8 +8,6 @@ discriminator:
     photo: ./ReductionPhoto.yaml
     ingredient: ./ReductionIngredient.yaml
 properties:
-  Email: 
-    $ref: https://api.redoc.ly/registry/testing_acme/adams%20great%20api/1.0.0/bundle/main/openapi.yaml#/components/schemas/Email
   kitchenId:
     type: string
     description: The kitchen ID.
