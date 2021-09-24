@@ -14,6 +14,9 @@ referenceDocs:
   generateCodeSamples:
     languages:  # Array of language config objects; indicates in which languages to generate code samples.
       - lang: curl # Can be one of the following supported languages: "curl", "Node.js", "JavaScript".
+      - lang: Go
+      - lang: Ruby
+      - lang: PHP
       - lang: "Node.js"
       - lang: "JavaScript"
       - lang: Python
