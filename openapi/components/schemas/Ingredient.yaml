@@ -27,7 +27,7 @@ properties:
   name:
     description: The name of the ingredient.
     type: string
-    example: 'broccoli'
+    example: 'spinach'
   quantity:
     description: The numeric value that corresponds with the units.
     type: number
