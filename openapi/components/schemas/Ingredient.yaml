@@ -9,7 +9,7 @@ required:
 properties:
   id:
     readOnly: true
-    type: string
+    type: strin
     description: |
       WFD assigns an ingredient ID to each ingredient.
     format: uuid
