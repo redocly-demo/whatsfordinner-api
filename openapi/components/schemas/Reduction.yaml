@@ -11,7 +11,7 @@ properties:
   kitchenId:
     type: string
     description: The kitchen ID.
-    example: altman-family
+    example: altman-family-kitchen
   reason:
     type: string
     description: The reason for the reduction.
