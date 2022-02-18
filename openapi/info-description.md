@@ -1,6 +1,6 @@
 # About the API
 
-Before you get too excited, this is a fake API created for a talk.
+Before you get too excited, this is a fake API created for a second talk.
 
 What's for dinner's APIs track kitchen ingredients on-hand.
 

@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  version: 1.0.0
-  title: What's for dinner?
+  version: 2.0.0
+  title: What's for lunch and dinner?
   termsOfService: 'https://docs.whatsfordinner.dev/terms/'
   contact:
     email: contact@example.com
@@ -28,13 +28,13 @@ tags:
 servers:
   - url: 'https://api.whatsfordinner.dev'
 paths:
-  '/photos':
+  '/v2/photos':
     $ref: 'paths/photos.yaml'
-  '/ingredients':
+  '/v2/ingredients':
     $ref: 'paths/ingredients.yaml'
-  '/ingredients-reduction':
+  '/v2/ingredients-reduction':
     $ref: 'paths/ingredients-reduction.yaml'
-  '/available-ingredients/{kitchenId}':
+  '/v2/available-ingredients/{kitchenId}':
     $ref: 'paths/available-ingredients@{kitchenId}.yaml'
   # '/ingredients-audit':
   #   $ref: 'paths/ingredients-audit.yaml'
