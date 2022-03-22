@@ -37,6 +37,6 @@ properties:
         type: array
         items:
           type: object
-            properties:
-              melanie:
-                type: string
+          properties:
+            melanie:
+              type: string
