@@ -4,7 +4,6 @@ apiDefinitions:
 lint:
   extends:
     - recommended
-  rules:
 referenceDocs:
   htmlTemplate: ./docs/index.html
   # theme:

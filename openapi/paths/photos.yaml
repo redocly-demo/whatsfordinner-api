@@ -5,6 +5,7 @@ post:
   operationId: postPhotos
   security:
     - auth: ['write:kitchen']
+    - basic: []
   description: |
     Upload a **photo** of a receipt or of a kitchen refrigerator, pantry, or cabinet contents.
 

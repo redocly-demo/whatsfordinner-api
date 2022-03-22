@@ -10,6 +10,7 @@ properties:
       WFD assigns a photo ID to each upload.
       Use the `photoId` as a filter to track ingredients added to the kitchen using the `ingredients-audit` API.
     format: uuid
+    # example: aaa-bbb-ccc
   file:
     description: |
       The file in a `base64` encoded format. Maximum size: 150 MB.
@@ -25,3 +26,17 @@ properties:
     type: string
     format: date-time
     readOnly: true
+  adam:
+    type: object
+    required:
+      - david
+    properties:
+      david:
+        type: object
+      altman:
+        type: array
+        items:
+          type: object
+          properties:
+            melanie:
+              type: string

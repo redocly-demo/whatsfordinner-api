@@ -1,0 +1,20 @@
+get:
+  operationId: getAdamsPath
+  summary: Adams Path
+  tags:
+    - Adam
+  responses: 
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Ingredient.yaml
+          examples:
+            pantry:
+              value:
+                adam: testing
+                kitchenId: '123213'
+            fridge:
+              value:
+                another: test
