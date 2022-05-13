@@ -4,6 +4,7 @@ post:
   summary: Add an ingredient
   operationId: postIngredients
   security:
+    - JWT: []
     - auth: ['write:kitchen']
   description: |
     Add an ingredient to a kitchen.
