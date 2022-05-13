@@ -2,6 +2,8 @@
 apis:
   dinner@v1: 
     root: openapi/openapi.yaml
+  dinner@v2:
+    root: openapi/v2.yaml
 lint:
   extends:
     - recommended

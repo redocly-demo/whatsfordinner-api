@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  version: 1.0.0
-  title: What's for dinner?
+  version: v2
+  title: What's for lunch and dinner?
   termsOfService: 'https://docs.whatsfordinner.dev/terms/'
   contact:
     email: contact@example.com
@@ -26,10 +26,7 @@ tags:
     description: |
       Cook, eat, donate, or discard ingredients.   
 servers:
-  - url: https://a24994f9-3b7b-49e1-96c7-f57ce08ceeb8.remockly.com
-    description: Mock server
-  - url: 'https://api.whatsfordinner.dev'
-    description: Production
+  - url: 'https://api.whatsfordinner.dev/v2'
 paths:
   '/photos':
     $ref: 'paths/photos.yaml'
