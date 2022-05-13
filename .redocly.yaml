@@ -1,22 +1,20 @@
-# See https://redoc.ly/docs/cli/configuration/ for more information.
-apiDefinitions:
-  dinner: openapi/openapi.yaml
+# See https://redocly.com/docs/cli/configuration/ for more information.
+apis:
+  dinner@v1: 
+    root: openapi/openapi.yaml
 lint:
   extends:
     - recommended
   rules:
     operation-4xx-response: off
-referenceDocs:
+features.openapi:
   htmlTemplate: ./docs/index.html
-  # theme:
-  #   colors:
-      # primary:
-      #   main: "#32329f"
   generateCodeSamples:
-    languages:  # Array of language config objects; indicates in which languages to generate code samples.
-      - lang: curl # Can be one of the following supported languages: "curl", "Node.js", "JavaScript".
+    languages:
+      - lang: curl
       - lang: "Node.js"
       - lang: "JavaScript"
       - lang: Python
+      - lang: PHP
       - lang: Java
       - lang: C#
