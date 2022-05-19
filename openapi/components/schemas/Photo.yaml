@@ -19,7 +19,7 @@ properties:
   kitchenId:
     description: The ingredients are added to the kitchen.
     type: string
-    example: 'altman-family'
+    example: 'smith-family'
   createdAt:
     description: The date-time (in ISO-8601 format) that the photo was uploaded.
     type: string
