@@ -6,7 +6,7 @@ post:
   security:
     - auth: ['write:kitchen']
   description: |
-    Whether the ingredients were cooked, eaten, tossed, or given away, mark them as reduced which in turn reduces the available ingredients.
+    When the ingredients are cooked, eaten, tossed, or given away, reduce the available ingredients.
   requestBody:
     content:
       application/json:
